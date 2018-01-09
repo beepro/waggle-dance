@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import klawSync from 'klaw-sync';
 
 export default function loadExpects(expectDirPath) {

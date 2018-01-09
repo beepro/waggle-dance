@@ -22,7 +22,7 @@ export default function applyFn(origin, operation) {
         index > operation.from.row &&
         index <= operation.to.row
       ) {
-        return undefined
+        return undefined;
       }
       return line;
     })

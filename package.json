@@ -1,11 +1,12 @@
 {
   "name": "waggle-dance",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib",
-    "test": "jest"
+    "build": "rm -Rf lib && babel --ignore __test__ src -d lib",
+    "test": "jest",
+    "pub": "npm run build && npm test && npm publish ."
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,10 @@
     "babel-jest": "^22.0.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.6.1",
     "jest": "^22.0.4",
     "klaw-sync": "^3.0.2",
     "regenerator-runtime": "^0.11.1"
