@@ -1,6 +1,6 @@
 {
   "name": "waggle-dance",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "jest": "^22.0.4",
+    "klaw-sync": "^3.0.2",
     "regenerator-runtime": "^0.11.1"
   },
   "homepage": "https://github.com/beepro/waggle-dance#readme"
