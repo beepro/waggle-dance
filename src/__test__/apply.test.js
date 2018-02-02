@@ -18,6 +18,34 @@ test('apply difference to add character', () => {
   })).toBe(expects.tobe.typeCharacter);
 });
 
+test('apply difference to add linebreak', () => {
+  expect(apply(expects.asis.linebreak, {
+    from: {
+      row: 1,
+      col: 3,
+    },
+    to: {
+      row: 1,
+      col: 3,
+    },
+    text: '\n',
+  })).toBe(expects.tobe.linebreak);
+});
+
+test('apply difference to add two linebreak', () => {
+  expect(apply(expects.asis.twoLinebreak, {
+    from: {
+      row: 1,
+      col: 3,
+    },
+    to: {
+      row: 1,
+      col: 3,
+    },
+    text: '\n\n',
+  })).toBe(expects.tobe.twoLinebreak);
+});
+
 test('apply difference to add words include linebreak', () => {
   expect(apply(expects.asis.pasteToAddWords, {
     from: {
