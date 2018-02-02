@@ -115,3 +115,17 @@ test('apply difference to delete line', () => {
     text: '',
   })).toBe(expects.tobe.deleteLine);
 });
+
+test('ignore invalid string manipulation', () => {
+  expect(apply(expects.asis.invalid, {
+    from: {
+      row: 0,
+      col: 0,
+    },
+    to: {
+      row: 100,
+      col: 100,
+    },
+    text: '',
+  })).toBe(expects.tobe.invalid);
+});

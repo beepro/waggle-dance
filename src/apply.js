@@ -13,7 +13,7 @@ export default function applyFn(origin, operation) {
 
       // replace string from "from"
       if (index === operation.from.row) {
-        const endOfLine = lines[operation.to.row];
+        const endOfLine = lines[operation.to.row] || '';
         return `${line.substr(0, operation.from.col)}${operation.text}${endOfLine.substr(operation.to.col, endOfLine.length)}`;
       }
 
